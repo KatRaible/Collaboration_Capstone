@@ -5,3 +5,4 @@ print("The land was full of coders and kittens. They had a party that was coming
 print("The party was to celebrate 100 years of peacefull cohabitation between the coders and kittens.")
 print("The kittens danced happily on top of keyboards.")
 print("There was a table full of delicious fish for this celebration.")
+print("As per tradition, the coders presented the kittens with plush blankets to make biscuits upon.")
