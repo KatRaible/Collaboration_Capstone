@@ -2,3 +2,4 @@
 
 print("Once upon a time, there was a land far, far away.")
 print("The land was full of coders and kittens. They had a party that was coming up that they needed to prepare for.")
+print("The party was to celebrate 100 years of peacefull cohabitation between the coders and kittens.")
