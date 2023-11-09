@@ -39,28 +39,25 @@ tax = 6.00
 
 while True:
     display_menu()
-    option = int(input(
-        "What pet would you like to adopt? Enter the corresponding number. Type '0' if you are ready to finalize your "
-        "purchase: "))
+    option = int(input("What pet would you like to adopt? Enter the corresponding number. Type '0' if you are ready to finalize your purchase: "))
     if 1 <= option and option <= len(products):
-        howmany = int(input(f"How many would you like? Enter a valid value: "))
+        howmany = int(input(f"How many {products[option - 1].name} would you like? Enter a valid value: "))
         selection = products[option - 1]
-        print(f"You have selected {howmany} {selection.name} for ${selection.price:.2f}!")
+        print(f"You have selected {howmany} {selection.name} for ${selection.price:.2f} each!")
         total = selection.price * howmany
         print(f'The cost for this is: ${total:.2f}')
-        order.append((selection.price, howmany, total))
-
-
+        order.append((selection.name, selection.price, howmany, total))
     elif option == 0:
-        print("Here is your total: ")
-        subtotal = sum(item[2] for item in order)
-        salestax = sales_tax(subtotal, tax)
-        grandtotal = subtotal + salestax
-
-        print(f"Subtotal: ${subtotal:.2f}")
-        print(f"Sales Tax: ${salestax:.2f}")
-        print(f"Grand Total: ${grandtotal:.2f}")
         break
+
+print("Here is your total:")
+subtotal = sum(item[3] for item in order)
+salestax = sales_tax(subtotal, tax)
+grandtotal = subtotal + salestax
+
+print(f"Subtotal: ${subtotal:.2f}")
+print(f"Sales Tax: ${salestax:.2f}")
+print(f"Grand Total: ${grandtotal:.2f}")
 
 while True:
     payment_type = input("Would you like to pay with cash, check, or credit? ")
@@ -84,7 +81,8 @@ while True:
 print("Thank you for shopping at the GC Pet Store!")
 print("Here is you receipt: ")
 print(f'Date: {date.today()}')
-# print all items ordered
+#for item in order:
+    #print items
 print(f'Subtotal: {subtotal}')
 print(f'Sales Tax: {salestax}')
 print(f'Total: {grandtotal}')
