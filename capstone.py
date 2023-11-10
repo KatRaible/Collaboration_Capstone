@@ -85,16 +85,16 @@ def process_order(products):
 
     subtotal = sum(item[3] for item in order)
     salestax = sales_tax(subtotal, tax)
-    grandtotal = subtotal + salestax
+    grandtotal = float(subtotal + salestax)
 
 
     while True:
-        print(grandtotal)
+        print(f'Your grand total is going to be: ${grandtotal:.2f}')
         payment_type = input("Would you like to pay with cash, check, or credit? ")
         if payment_type == "cash":
             cash_tender = int(input("Amount tendered: "))
             change = cash_tender - grandtotal
-            print(f"Change: ${change}")
+            print(f"Change: ${change:.2f}")
             break
         elif payment_type == "check":
             check_num = int(input("Check number: "))
