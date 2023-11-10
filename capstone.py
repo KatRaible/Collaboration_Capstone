@@ -24,19 +24,25 @@ class Cat(Pet):
 
 
 pets = [
-    Pet("Dog", "Mammals", 199.00),
-    Pet("Cat", "Mammals", 99.00),
-    Pet("Rabbit", "Mammals", 30.00),
-    Pet("Guinea Pig", "Mammals", 15.00),
-    Pet("Cockatiel", "Birds", 175.00),
-    Pet("Mouse", "Mammals", 2.00),
-    Pet("Ferret", "Mammals", 100.00),
-    Pet("Snake", "Reptiles", 60.00),
+    Pet("Dog(s)", "Mammals", 199.00),
+    Pet("Cat(s)", "Mammals", 99.00),
+    Pet("Rabbit(s)", "Mammals", 30.00),
+    Pet("Guinea Pig(s)", "Mammals", 15.00),
+    Pet("Cockatiel(s)", "Birds", 175.00),
+    Pet("Mice", "Mammals", 2.00),
+    Pet("Ferret(s)", "Mammals", 100.00),
+    Pet("Snake(s)", "Reptiles", 60.00),
     Pet("Betta Fish", "Fish", 5.00),
     Pet("Bearded Dragon", "Reptiles", 50.00),
-    Pet("Hamster", "Mammals", 15.00),
-    Pet("Turtle", "Reptiles", 45.00),
+    Pet("Hamster(s)", "Mammals", 15.00),
+    Pet("Turtle(s)", "Reptiles", 45.00),
+    Dog("Bulldog Puppy", 'Mammals', 395.00, 'Puppy'),
+    Dog("Golden Retriever", 'Mammals', 125.00, 'Dog'),
+    Dog("Senior Labrador", 'Mammals', 0.00, 'Senior'),
+    Cat("Kitten", 'Mammals', 99.00, 'Kitten'),
+    Cat("Persian Cat", 'Mammals', 45.00, 'Cat'),
 ]
+
 
 
 def display_menu(pet_list):
@@ -83,6 +89,7 @@ def process_order(products):
 
 
     while True:
+        print(grandtotal)
         payment_type = input("Would you like to pay with cash, check, or credit? ")
         if payment_type == "cash":
             cash_tender = int(input("Amount tendered: "))
