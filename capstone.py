@@ -120,13 +120,15 @@ def process_order(products):
         print("Here is your receipt:")
         print("=====================")
         print(f'Date: {date.today()}')
+        print()
         for item in order:
             print(f'{item[2]} {item[0]} at ${item[1]:.2f} each (${item[3]:.2f})')
+        print()
         print(f'Subtotal: ${subtotal:.2f}')
         print(f'Sales Tax: ${salestax:.2f}')
         print(f'Total: ${grandtotal:.2f}')
         print(f'Payment Method: {payment_type}')
-
+        print()
     display_receipt(order, subtotal, salestax, grandtotal, payment_type.upper())
 
 
