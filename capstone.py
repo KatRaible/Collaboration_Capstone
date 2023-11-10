@@ -92,7 +92,11 @@ def process_order(products):
         print(f'Your grand total is going to be: ${grandtotal:.2f}')
         payment_type = input("Would you like to pay with cash, check, or credit? ")
         if payment_type == "cash":
-            cash_tender = int(input("Amount tendered: "))
+            cash_tender = float(input("Amount tendered: "))
+            if cash_tender <= grandtotal:
+                print ("Insufficient funds provided")
+            else:
+                break    
             change = cash_tender - grandtotal
             print(f"Change: ${change:.2f}")
             break
