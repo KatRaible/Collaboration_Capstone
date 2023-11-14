@@ -11,36 +11,21 @@ class Pet:
         print(f'{self.name}: ${self.price:.2f}')
 
 
-class Dog(Pet):
-    def __init__(self, name, category, price, age_category='Dog'):
-        super().__init__(name, category, price)
-        self.age_category = age_category
-
-
-class Cat(Pet):
-    def __init__(self, name, category, price, age_category='Cat'):
-        super().__init__(name, category, price)
-        self.age_category = age_category
 
 
 pets = [
-    Pet("Dog(s)", "Mammals", 199.00),
-    Pet("Cat(s)", "Mammals", 99.00),
-    Pet("Rabbit(s)", "Mammals", 30.00),
-    Pet("Guinea Pig(s)", "Mammals", 15.00),
-    Pet("Cockatiel(s)", "Birds", 175.00),
-    Pet("Mice", "Mammals", 2.00),
-    Pet("Ferret(s)", "Mammals", 100.00),
-    Pet("Snake(s)", "Reptiles", 60.00),
+    Pet("Dog(s)", "Dogs", 199.00),
+    Pet("Cat(s)", "Cats", 99.00),
+    Pet("Rabbit(s)", "Rabbits", 30.00),
+    Pet("Guinea Pig(s)", "Guinea_Pigs", 15.00),
+    Pet("Birds", "Birds", 175.00),
+    Pet("Mice", "Mice", 2.00),
+    Pet("Ferret(s)", "Ferrets", 100.00),
+    Pet("Snake(s)", "Snakes", 60.00),
     Pet("Betta Fish", "Fish", 5.00),
-    Pet("Bearded Dragon", "Reptiles", 50.00),
-    Pet("Hamster(s)", "Mammals", 15.00),
-    Pet("Turtle(s)", "Reptiles", 45.00),
-    Dog("Bulldog Puppy", 'Mammals', 395.00, 'Puppy'),
-    Dog("Golden Retriever", 'Mammals', 125.00, 'Dog'),
-    Dog("Senior Labrador", 'Mammals', 0.00, 'Senior'),
-    Cat("Kitten", 'Mammals', 99.00, 'Kitten'),
-    Cat("Persian Cat", 'Mammals', 45.00, 'Cat'),
+    Pet("Bearded Dragon", "Dragon", 50.00),
+    Pet("Hamster(s)", "Hamsters", 15.00),
+    Pet("Turtle(s)", "Turtles", 45.00),
 ]
 
 
