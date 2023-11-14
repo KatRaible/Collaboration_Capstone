@@ -40,7 +40,6 @@ def sales_tax(total, tax):
     return total * (tax / 100)
 
 
-order = []
 tax = 6.00
 
 
