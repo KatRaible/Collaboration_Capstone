@@ -45,7 +45,7 @@ pets = [
 
 
 def display_menu(pet_list):
-    print("Welcome to the GC Pet Store! Here is what we have to offer: ")
+    print("Welcome to the Pawsitive Pets Pet Store! Here is what we have to offer: ")
     print("============================================================")
     for i, pet in enumerate(pet_list, 1):
         print(f'{i}. {pet.name}: ${pet.price:.2f}')
@@ -133,4 +133,4 @@ def process_order(products):
 
 
 order = process_order(pets)
-print("Thank you for shopping at the GC Pet Store!")
+print("Thank you for shopping at the Pawsitive Pets Pet Store!")
