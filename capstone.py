@@ -25,8 +25,11 @@ pets = [
 
 
 def display_menu(pet_list):
+    print()
     print("Welcome to the Pawsitive Pets Pet Store! Here is what we have to offer: ")
+    print()
     print("============================================================")
+    print()
     for i, pet in enumerate(pet_list, 1):
         print(f'{i}. {pet.name}: ${pet.price:.2f}')
 
@@ -96,8 +99,11 @@ def process_order(products):
 
     def display_receipt(order, subtotal, salestax, grandtotal, payment_type):
         print()
+        print()
         print("Here is your receipt:")
+        print()
         print("=====================")
+        print()
         print(f'Date: {date.today()}')
         print()
         for item in order:
@@ -112,4 +118,9 @@ def process_order(products):
 
 
 order = process_order(pets)
+print()
 print("Thank you for shopping at the Pawsitive Pets Pet Store!")
+print()
+print()
+print()
+
