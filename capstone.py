@@ -7,11 +7,6 @@ class Pet:
         self.category = category
         self.price = price
 
-    def display_info(self):
-        print(f'{self.name}: ${self.price:.2f}')
-
-
-
 
 pets = [
     Pet("Dog(s)", "Dogs", 199.00),
